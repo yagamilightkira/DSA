@@ -1,2 +1,2 @@
 # DSA
-Preactice DSA questions.
+Preactice DSA questions!
