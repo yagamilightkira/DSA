@@ -8,7 +8,7 @@ struct Node {
     this->data = data;
     next = NULL;
   }
-}
+};
 
 struct LinkedList {
   Node* head;
@@ -41,7 +41,7 @@ struct LinkedList {
     head = prev;
   }
 
-}
+};
 
 int main() {
   LinkedList ll;
@@ -50,9 +50,12 @@ int main() {
   ll.push(30);
   ll.push(40);
 
-  cout << "Given LL: " << ll.print() << endl;
+  cout << "Given LL: ";
+  ll.print();
+  
   ll.reverse();
 
-  cout << "Reverse LL: " << ll.print() << endl;
-
+  cout << "\nReverse LL: ";
+  ll.print();
+  cout << endl;
 }
