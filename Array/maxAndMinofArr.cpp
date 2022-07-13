@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Pair {
+typedef struct Pair {
   int min;
   int max;
-};
+}Pair;
 
 Pair maxAndMinArr( int arr[], int n ) {
-  struct Pair minmax;
+  Pair minmax;
   if ( n == 1 ) {
     minmax.min = arr[0];
     minmax.max = arr[0];
@@ -32,10 +32,10 @@ Pair maxAndMinArr( int arr[], int n ) {
 }
 
 int main() {
- int arr[] = {1, 2, 11, 0, -1 };
+ int arr[] = {1, 2, 11, 0, -11 };
  int n = sizeof(arr)/sizeof(arr[0]);
 
- struct Pair result = maxAndMinArr( arr, n );
+ Pair result = maxAndMinArr( arr, n );
  cout << " min: " << result.min << " max: " << result.max << endl;
 
  return 0;
