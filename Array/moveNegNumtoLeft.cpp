@@ -8,6 +8,7 @@ void printTheArr( vector<int> v, int n ) {
   cout << endl;
 }
 
+// failing in case of 0s
 void moveNegNumtoLeft( vector<int> v, int n ) {
   int left = 0, right = n - 1;
   while ( left <= right ) {
@@ -25,6 +26,20 @@ void moveNegNumtoLeft( vector<int> v, int n ) {
   printTheArr( v, n );
 }
 
+void rearrange( vector<int> v, int n ) {
+  int l = 0, h = n -1;
+  while ( l < h ) {
+    if ( v[l] < 0 ) {
+      l++;
+    } else if ( v[h] > 0 ) {
+      h--;
+    } else {
+      swap( v[l], v[h] );
+    }
+  }
+  printTheArr( v, n );
+}
+
 int main() {
   vector<int> v;
   int n, temp;
@@ -34,4 +49,5 @@ int main() {
     v.push_back(temp);
   }
   moveNegNumtoLeft(v, n);
+  // rearrange( v, n );
 }
